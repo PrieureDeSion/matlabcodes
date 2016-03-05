@@ -1,0 +1,586 @@
+diary on
+date
+
+ans =
+
+02-Mar-2016
+
+diary off
+clc
+clock
+
+ans =
+
+   1.0e+03 *
+
+    2.0160    0.0030    0.0020    0.0190    0.0260    0.0040
+
+now
+
+ans =
+
+   7.3639e+05
+
+datestr(now)
+
+ans =
+
+02-Mar-2016 19:28:18
+
+datenum(datestr(now))
+
+ans =
+
+   7.3639e+05
+
+home
+clear
+clear all //clears all workspace variables
+//home would just work like clear of terminal
+ //home would just work like clear of terminal
+ ↑
+{Error: Unexpected MATLAB operator.
+} 
+diary off
+A = magic(3)
+
+A =
+
+     8     1     6
+     3     5     7
+     4     9     2
+
+format short
+A = magic(3)
+
+A =
+
+     8     1     6
+     3     5     7
+     4     9     2
+
+format float
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('format')" style="font-weight:bold">format</a>
+Unknown command option.
+} 
+format real
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('format')" style="font-weight:bold">format</a>
+Unknown command option.
+} 
+% available formats: short(.4), short g(significant)
+
+pi
+
+ans =
+
+    3.1416
+
+format short g
+%format: long is the 64 bit precision.. ~15 after decimal
+pi
+
+ans =
+
+       3.1416
+
+format long g
+pi
+
+ans =
+
+          3.14159265358979
+
+% format bank, hex, octal :D
+doc format
+which fft %to check if a similar function exists.. here, fast fourier transfor
+built-in (/home/dhruv-shah/MATLAB/toolbox/matlab/datafun/@logical/fft)  % logical method
+doc ffr
+doc fft
+which var
+/home/dhruv-shah/MATLAB/toolbox/matlab/datafun/var.m
+doc var
+%which can also be used to point out WHICH of the existent vars are we referring to.. say multiple variables have same name in diff workspaces.. :D
+who
+
+Your variables are:
+
+A    ans  
+
+whos
+  Name      Size            Bytes  Class     Attributes
+
+  A         3x3                72  double              
+  ans       1x1                 8  double              
+
+global A
+[Warning: The value of local variables may have been changed to match the globals.  Future versions of MATLAB will require
+that you declare a variable to be global before you use that variable.] 
+[] 
+global BEC = 1
+ global BEC = 1
+            ↑
+{Error: The expression to the left of the equals sign is not a valid target for an assignment.
+} 
+global BEC = [1]
+ global BEC = [1]
+            ↑
+{Error: The expression to the left of the equals sign is not a valid target for an assignment.
+} 
+whos
+  Name      Size            Bytes  Class     Attributes
+
+  A         3x3                72  double    global    
+  ans       1x1                 8  double              
+
+home
+x = [1:100]
+
+x =
+
+  Columns 1 through 20
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15    16    17    18    19    20
+
+  Columns 21 through 40
+
+    21    22    23    24    25    26    27    28    29    30    31    32    33    34    35    36    37    38    39    40
+
+  Columns 41 through 60
+
+    41    42    43    44    45    46    47    48    49    50    51    52    53    54    55    56    57    58    59    60
+
+  Columns 61 through 80
+
+    61    62    63    64    65    66    67    68    69    70    71    72    73    74    75    76    77    78    79    80
+
+  Columns 81 through 100
+
+    81    82    83    84    85    86    87    88    89    90    91    92    93    94    95    96    97    98    99   100
+
+y = sin(x)
+
+y =
+
+  Columns 1 through 4
+
+         0.841470984807897         0.909297426825682         0.141120008059867        -0.756802495307928
+
+  Columns 5 through 8
+
+        -0.958924274663138        -0.279415498198926         0.656986598718789         0.989358246623382
+
+  Columns 9 through 12
+
+         0.412118485241757         -0.54402111088937        -0.999990206550703        -0.536572918000435
+
+  Columns 13 through 16
+
+         0.420167036826641          0.99060735569487         0.650287840157117        -0.287903316665065
+
+  Columns 17 through 20
+
+        -0.961397491879557        -0.750987246771676         0.149877209662952         0.912945250727628
+
+  Columns 21 through 24
+
+         0.836655638536056      -0.00885130929040388        -0.846220404175171        -0.905578362006624
+
+  Columns 25 through 28
+
+        -0.132351750097773         0.762558450479603         0.956375928404503         0.270905788307869
+
+  Columns 29 through 32
+
+        -0.663633884212968        -0.988031624092862        -0.404037645323065         0.551426681241691
+
+  Columns 33 through 36
+
+         0.999911860107267         0.529082686120024        -0.428182669496151        -0.991778853443116
+
+  Columns 37 through 40
+
+        -0.643538133356999         0.296368578709385         0.963795386284088         0.745113160479349
+
+  Columns 41 through 44
+
+        -0.158622668804709        -0.916521547915634        -0.831774742628598        0.0177019251054136
+
+  Columns 45 through 48
+
+         0.850903524534118         0.901788347648809         0.123573122745224        -0.768254661323667
+
+  Columns 49 through 52
+
+        -0.953752652759472        -0.262374853703929         0.670229175843375         0.986627592040485
+
+  Columns 53 through 56
+
+         0.395925150181834        -0.558789048851616         -0.99975517335862        -0.521551002086912
+
+  Columns 57 through 60
+
+         0.436164755247825         0.992872648084537         0.636738007139138        -0.304810621102217
+
+  Columns 61 through 64
+
+        -0.966117770008393        -0.739180696649223         0.167355700302807         0.920026038196791
+
+  Columns 65 through 68
+
+         0.826828679490103       -0.0265511540239668        -0.855519978975322        -0.897927680689291
+
+  Columns 69 through 72
+
+        -0.114784813783187         0.773890681557889         0.951054653254375         0.253823362762036
+
+  Columns 73 through 76
+
+        -0.676771956887308        -0.985146260468247         -0.38778163540943          0.56610763689818
+
+  Columns 77 through 80
+
+         0.999520158580731         0.513978455987535        -0.444112668707508        -0.993888653923375
+
+  Columns 81 through 84
+
+        -0.629887994274454         0.313228782433085         0.968364461100185         0.733190320073292
+
+  Columns 85 through 88
+
+        -0.176075619948587         -0.92345844700406        -0.821817836630823        0.0353983027336607
+
+  Columns 89 through 92
+
+         0.860069405812453         0.893996663600558         0.105987511751157        -0.779466069615805
+
+  Columns 93 through 96
+
+        -0.948282141269947        -0.245251985467654         0.683261714736121         0.983587745434345
+
+  Columns 97 through 100
+
+         0.379607739027522        -0.573381871990423        -0.999206834186354        -0.506365641109759
+
+ymax = max(y)
+
+ymax =
+
+         0.999911860107267
+
+plot(x,y)
+plot(x,ymax)
+plot(x,y)
+plot(x,y)
+diary off
+diary on
+pi
+
+ans =
+
+    3.1416
+
+format compact
+pi
+ans =
+    3.1416
+format loose
+pi
+
+ans =
+
+    3.1416
+
+format compact %display settings...
+A = [1:100]
+A =
+  Columns 1 through 20
+     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15    16    17    18    19    20
+  Columns 21 through 40
+    21    22    23    24    25    26    27    28    29    30    31    32    33    34    35    36    37    38    39    40
+  Columns 41 through 60
+    41    42    43    44    45    46    47    48    49    50    51    52    53    54    55    56    57    58    59    60
+  Columns 61 through 80
+    61    62    63    64    65    66    67    68    69    70    71    72    73    74    75    76    77    78    79    80
+  Columns 81 through 100
+    81    82    83    84    85    86    87    88    89    90    91    92    93    94    95    96    97    98    99   100
+B = inv(A)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('inv')" style="font-weight:bold">inv</a>
+Matrix must be square.} 
+A=magic(4)
+A =
+    16     2     3    13
+     5    11    10     8
+     9     7     6    12
+     4    14    15     1
+B = inv(A)
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.306145e-17.] 
+[] 
+B =
+   9.3825e+13   2.8147e+14  -2.8147e+14  -9.3825e+13
+   2.8147e+14   8.4442e+14  -8.4442e+14  -2.8147e+14
+  -2.8147e+14  -8.4442e+14   8.4442e+14   2.8147e+14
+  -9.3825e+13  -2.8147e+14   2.8147e+14   9.3825e+13
+A=magic(3)
+A =
+     8     1     6
+     3     5     7
+     4     9     2
+B = inv(A)
+B =
+      0.14722     -0.14444     0.063889
+    -0.061111     0.022222      0.10556
+    -0.019444      0.18889     -0.10278
+det(A0
+ det(A0
+       ↑
+{Error: Expression or statement is incorrect--possibly unbalanced (, {, or [.
+} 
+det(A)
+ans =
+  -360
+A=magic(4)
+A =
+    16     2     3    13
+     5    11    10     8
+     9     7     6    12
+     4    14    15     1
+det(A)
+ans =
+  -1.4495e-12
+sin(pi
+ sin(pi
+       ↑
+{Error: Expression or statement is incorrect--possibly unbalanced (, {, or [.
+} 
+sin(pi)
+ans =
+   1.2246e-16
+B=[0:0.2:10]
+B =
+  Columns 1 through 9
+            0          0.2          0.4          0.6          0.8            1          1.2          1.4          1.6
+  Columns 10 through 18
+          1.8            2          2.2          2.4          2.6          2.8            3          3.2          3.4
+  Columns 19 through 27
+          3.6          3.8            4          4.2          4.4          4.6          4.8            5          5.2
+  Columns 28 through 36
+          5.4          5.6          5.8            6          6.2          6.4          6.6          6.8            7
+  Columns 37 through 45
+          7.2          7.4          7.6          7.8            8          8.2          8.4          8.6          8.8
+  Columns 46 through 51
+            9          9.2          9.4          9.6          9.8           10
+license
+ans =
+1066106
+eig(A)
+ans =
+           34
+       8.9443
+      -8.9443
+   2.0576e-15
+rank(A)
+ans =
+     3
+fliplr(A)
+ans =
+    13     3     2    16
+     8    10    11     5
+    12     6     7     9
+     1    15    14     4
+flipud(A)
+ans =
+     4    14    15     1
+     9     7     6    12
+     5    11    10     8
+    16     2     3    13
+v1 = 1:2:7
+v1 =
+     1     3     5     7
+v2=2:3:8
+v2 =
+     2     5     8
+dot(v1,v2)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dot', '/home/dhruv-shah/MATLAB/toolbox/matlab/specfun/dot.m', 33)" style="font-weight:bold">dot</a> (<a href="matlab: opentoline('/home/dhruv-shah/MATLAB/toolbox/matlab/specfun/dot.m',33,0)">line 33</a>)
+A and B must be same size.} 
+v2 = v2 2
+ v2 = v2 2
+         ↑
+{Error: Unexpected MATLAB expression.
+} 
+v2 = @:3:10
+ v2 = @:3:10
+       ↑
+{Error: Unexpected MATLAB operator.
+} 
+v2 = 2:3:10
+v2 =
+     2     5     8
+dot(v1,v2)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dot', '/home/dhruv-shah/MATLAB/toolbox/matlab/specfun/dot.m', 33)" style="font-weight:bold">dot</a> (<a href="matlab: opentoline('/home/dhruv-shah/MATLAB/toolbox/matlab/specfun/dot.m',33,0)">line 33</a>)
+A and B must be same size.} 
+v2 = 2:3:12
+v2 =
+     2     5     8    11
+dot(v1,v2)
+ans =
+   134
+diag(v1)
+ans =
+     1     0     0     0
+     0     3     0     0
+     0     0     5     0
+     0     0     0     7
+diag(A)
+ans =
+    16
+    11
+     6
+     1
+y = logspace(1,5)
+y =
+  Columns 1 through 9
+           10       12.068       14.563       17.575        21.21       25.595       30.888       37.276       44.984
+  Columns 10 through 18
+       54.287       65.513        79.06        95.41       115.14       138.95       167.68       202.36       244.21
+  Columns 19 through 27
+       294.71       355.65       429.19       517.95       625.06       754.31        910.3       1098.5       1325.7
+  Columns 28 through 36
+       1599.9       1930.7         2330       2811.8       3393.2       4094.9       4941.7       5963.6       7196.9
+  Columns 37 through 45
+       8685.1        10481        12649        15264        18421        22230        26827        32375        39069
+  Columns 46 through 50
+        47149        56899        68665        82864        1e+05
+%now, scripts and solving
+%finally, feels...
+edit
+eig(A)
+ans =
+           34
+       8.9443
+      -8.9443
+   2.0576e-15
+a1 = 3;
+a2 = 1;
+a1a2
+{Undefined function or variable 'a1a2'.} 
+a1*a2
+ans =
+     3
+a=1, b=2;
+a =
+     1
+b
+b =
+     2
+quadSoln
+{Undefined function or variable 'quadSoln'.} 
+quadSoln
+{Undefined function or variable 'quadSoln'.} 
+quadSoln
+quadSoln
+s2 =
+   -12
+s1 =
+    -8
+quadSoln
+s2 =
+    -3
+s1 =
+    -2
+%see script
+quadSoln
+s2 =
+    -3
+quadSoln
+s2 =
+    -3
+s1 =
+    -2
+ans =
+     8     1     6
+     3     5     7
+     4     9     2
+ans =
+     8     1     6
+     3     5     7
+     4     9     2
+quadSoln
+s2 =
+    -3
+s1 =
+    -2
+ans =
+     8     1     6
+     3     5     7
+     4     9     2
+ans =
+     8     1     6
+     3     5     7
+     4     9     2
+s2 =
+    -3
+s1 =
+    -2
+s =
+           -3
+           -2
+s =
+      -4.7187 +          0i
+       -1.826 +          0i
+     -0.81485 +     1.8309i
+     -0.81485 -     1.8309i
+       0.2146 +     2.2071i
+       0.2146 -     2.2071i
+       1.3755 +    0.82388i
+       1.3755 -    0.82388i
+   -0.0057145 +          0i
+ans =
+     1     0   -13    12
+which multi
+'multi' not found.
+doc multidiemensional
+ans =
+     1     0   -13    12
+ans =
+     1     4     8
+cd ..
+cd ..
+cd bin
+cd html
+quadSoln.pdf
+{Undefined variable "quadSoln" or class "quadSoln.pdf".} 
+cd .. ..
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cd')" style="font-weight:bold">cd</a>
+Too many input arguments.} 
+cd ..
+cd ..
+cd bin
+mkdir practice
+mv quadSoln practice
+{Undefined function or variable 'mv'.} 
+rm practice
+{Undefined function or variable 'rm'.} 
+del practice
+{To use 'del', you might need:
+  <a href="http://www.mathworks.com/help/releases/R2015b/robotics/ref/del.html">del</a> - <a href="matlab:matlab.internal.language.introspective.showAddon('RO');">Robotics System Toolbox</a>} 
+edit
+cd ..
+userInput
+{Error: <a href="matlab: opentoline('/home/dhruv-shah/MATLAB/bin/userInput.m',4,15)">File: userInput.m Line: 4 Column: 15
+</a>String is not terminated properly.} 
+userInput
+{Error: <a href="matlab: opentoline('/home/dhruv-shah/MATLAB/bin/userInput.m',4,15)">File: userInput.m Line: 4 Column: 15
+</a>String is not terminated properly.} 
+userInput
+Enter coeeficients: 
+1 1 2
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('userInput', '/home/dhruv-shah/MATLAB/bin/userInput.m', 4)" style="font-weight:bold">userInput</a> (<a href="matlab: opentoline('/home/dhruv-shah/MATLAB/bin/userInput.m',4,0)">line 4</a>)
+Error: Unexpected MATLAB expression.} 
+matlab.internal.language.introspective.errorDocCallback('userInput', '/home/dhruv-shah/MATLAB/bin/userInput.m', 4)
+userInput
+Enter coeeficients: 
+1 2 3
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('userInput', '/home/dhruv-shah/MATLAB/bin/userInput.m', 5)" style="font-weight:bold">userInput</a> (<a href="matlab: opentoline('/home/dhruv-shah/MATLAB/bin/userInput.m',5,0)">line 5</a>)
+Error: Unexpected MATLAB expression.} 
+doc input
+doc input
