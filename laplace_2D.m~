@@ -12,10 +12,10 @@ Vt = V;
 %now the actual algorithm
 err_tol = 1e-3;
 err=1;
-it =1000; %change the number of iterations here
+it =0;
 nx = 101;ny=101; %can change
 
-for k = 2:it
+for k = 2:10000
     for i = 2:nx-1
         for j = 2:ny-1
             Vt(i,j) = (V(i+1,j) + V(i,j+1) + V(i-1,j) + V(i,j-1))/4;
