@@ -1,6 +1,10 @@
+%% Fourier Analysis
+% The most concise and epic usage! All nice functions used!
+% Actuating the fft, using actual definitions
+
 clear;clear All;
 syms x k L n;
-f=exp(x);
+f=sin(pi*x)+cos(2*pi*x+ pi/6);
 evalin(symengine,'assume(k,Type::Integer)');
 a = @(f,x,k,L) int(f*cos(k*pi*x/L)/L,x,-L,L);
 b = @(f,x,k,L) int(f*sin(k*pi*x/L)/L,x,-L,L);
@@ -10,7 +14,7 @@ pretty(fs(f,x,10,1));
 
 figure; 
 for count=1:1:10
-    ezplot(fs(f,x,count,1),-3,3)
+    ezplot(fs(f,x,count,1),-3,3);
     hold on
     ezplot(f,-3,3);
     hold off
